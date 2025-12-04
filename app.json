@@ -1,0 +1,32 @@
+{
+  "id": "9e125e41-4a6c-4342-aa87-d861fbf05f47",
+  "name": "BonusRegister",
+  "publisher": "YUSUF",
+  "version": "1.0.0.0",
+  "brief": "Register bonunes for customers.",
+  "description": "Extension allows register bonunes for Customers and generate reports for it.",
+  "privacyStatement": "",
+  "EULA": "",
+  "help": "",
+  "url": "",
+  "logo": "res/logoipsum-405.png",
+  "dependencies": [],
+  "screenshots": [],
+  "platform": "1.0.0.0",
+  "application": "26.0.0.0",
+  "idRanges": [
+    {
+      "from": 50120,
+      "to": 50149
+    }
+  ],
+  "resourceExposurePolicy": {
+    "allowDebugging": true,
+    "allowDownloadingSource": false,
+    "includeSourceInSymbolFile": false
+  },
+  "runtime": "15.0",
+  "features": [
+    "NoImplicitWith"
+  ]
+}
