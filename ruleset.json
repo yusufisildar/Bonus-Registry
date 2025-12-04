@@ -1,0 +1,10 @@
+{
+    "name": "Custom Ruleset",
+    "description": "Disable filename warnings",
+    "rules": [
+        {
+            "id": "AA0215",
+            "action": "None"
+        }
+    ]
+}

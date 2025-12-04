@@ -1,87 +1,86 @@
-# BG-Grup-Batch-Operations
+# Bonus Registration Extension
 
-Business Central extension for batch operations on warehouse and sales documents.
+Business Central extension for managing bonus registrations and calculations for customers.
 
 ## Features
 
-### Batch Invoice Download
-- Download multiple selected invoices as a ZIP file
-- Automatically generates PDF files for each selected invoice
-- Creates a timestamped ZIP archive for easy distribution
+### Bonus Card Management
+- Create and manage Bonus Cards for specific customers
+- Define bonus periods with starting and ending dates
+- Track bonus status (Open, Released)
 
-### Batch Warehouse Pick Creation
-- Create warehouse picks for multiple selected warehouse shipments
-- Adds "Create Pick for Selected" button to Warehouse Shipment List
-- Validates shipment status before creating picks
-- Shows success message after completion
+### Flexible Bonus Configuration
+- Configure bonuses for specific items or all items
+- Set custom bonus percentages per item
+- Support for multiple bonus configurations per customer
 
-### Batch Warehouse Shipment Creation
-- Create warehouse shipments for multiple selected sales orders
-- Adds "Create Warehouse Shipment for Selected" button to Sales Order List
-- Only processes released sales orders with locations requiring shipment
-- Automatically creates warehouse shipment headers and lines
+### Bonus Status Tracking
+- **Open Status**: Bonus card is editable and not yet calculated
+- **Released Status**: Bonus card is calculated and locked for editing
+
+### Sales Analysis
+- View posted sales lines that qualified for bonus grants
+- Display total bonus amount per customer
+- Track bonus calculations linked to sales transactions
+
+### Reporting
+- Print bonus reports for audit and customer communication
+- Generate summary reports of bonus calculations
+- Export bonus data for analysis
 
 ## Installation
 
 1. Download the extension
 2. Install in Business Central
 3. Assign appropriate permissions to users
+4. Configure bonus settings as needed
 
 ## Usage
 
-### Invoice Download
-1. Go to Posted Sales Invoices list
-2. Select multiple invoices
-3. Click "Download Selected as ZIP"
+### Creating a Bonus Card
+1. Go to Bonus Registration
+2. Click "New" to create a new bonus card
+3. Select the Bill-to Customer
+4. Define the starting and ending dates
+5. Configure bonus items and percentages
+6. Save the bonus card (Status: Open)
 
-### Warehouse Pick Creation
-1. Go to Warehouse Shipment List
-2. Select multiple warehouse shipments
-3. Click "Create Pick for Selected"
+### Managing Bonuses
+1. Select items or leave blank for all items
+2. Set the bonus percentage for each item
+3. Release the bonus card when ready (Status: Released)
+4. View applied bonuses on posted sales lines
 
-### Warehouse Shipment Creation
-1. Go to Sales Order List
-2. Select multiple released sales orders
-3. Click "Create Warehouse Shipment for Selected"
+### Viewing Bonus Applications
+1. Open a released Bonus Card
+2. View the list of posted sales lines with applied bonuses
+3. Check the total bonus amount granted
+
+### Printing Reports
+1. Open a Bonus Card
+2. Click "Print" or "Preview"
+3. Select the desired report format
+4. Print or export the report
 
 ## Objects
 
-**Codeunits**: 50300 (Invoice Download Management), 50302 (Batch Whse. Shipment Creation)
+**Tables**: Bonus Header, Bonus Line
 
-**Pages**: 50300 (User Selection Dialog)
+**Pages**: Bonus Card, Bonus List
 
-**Page Extensions**: 50300 (Posted Sales Invoices Ext), 50302 (Warehouse Activity List Ext), 50303 (Sales Order List Ext)
+**Reports**: Bonus Report
+
+**Enums**: Bonus Header Status (Open, Released)
 
 ## Development Status
 
-**Current Version**: 1.0.0.7
+**Current Version**: 1.0.0.0
 
-**Platform**: Business Central 26.0
+**Platform**: Business Central (Latest)
 
-**Runtime**: 15.0
-
-**ID Range**: 50300-50349
-
-**Status**: DEPRECATED - Use standalone extensions instead
-
-## Standalone Extensions
-
-From now on, all batch operations are available as individual standalone extensions:
-
-- **BG-Batch-Invoice-Download** (ID: 50100-50149): Invoice download functionality
-- **BG-Batch-Pick-Creation** (ID: 50150-50199): Warehouse pick creation
-- **BG-Batch-Warehouse-Shipment** (ID: 50200-50249): Warehouse shipment creation
-
-## Dependencies
-
-WarehouseManagmentBG (BG Grup) v1.0.2.5
-
-## Migration Notice
-
-**This extension is deprecated.** Please use the standalone extensions for better maintainability and modular functionality.
+**ID Range**: 65400-65450
 
 ## Requirements
 
-- Business Central version 26.0 or later
-- Warehouse Management module
-- Appropriate user permissions for warehouse operations
+- Business Central latest version
+- Appropriate user permissions for bonus management
